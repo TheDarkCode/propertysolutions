@@ -1,9 +1,7 @@
 
 class PropertySolutions::ApiConsumer
   
-  @base = ''
-  
-  def request(method, data)
+  def self.request(base, method, data)
 
     data.delete_if { |k,v| v.nil? }    
     data = {
@@ -19,13 +17,13 @@ class PropertySolutions::ApiConsumer
     }
     
     resp = Typhoeus::Request.new(
-        "#{PropertySolutions::domain}.propertysolutions.com/api/#{@base}",
+        "#{PropertySolutions::domain}.propertysolutions.com/api/#{base}",
         method: :post,
         headers: { "Content-type": "application/json, charset: utf-8" },
         params: data       
       ).run
  
     return resp
+  end
 
-  end 
 end
