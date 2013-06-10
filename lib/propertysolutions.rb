@@ -1,4 +1,4 @@
-require "propertysolutions/engine"
+require "property_solutions/engine"
 
 module PropertySolutions
       

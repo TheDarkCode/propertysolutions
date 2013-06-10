@@ -1,6 +1,6 @@
-require "propertysolutions/version"
+require "property_solutions/version"
 
-namespace :propertysolutions do
+namespace :property_solutions do
 
   desc "Initializes the database for a caboose installation"
   task :db => :environment do
