@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+
+require 'rails/all'
+require 'propertysolutions'
+require 'propertysolutions/engine'
+require 'propertysolutions/version'
+require 'propertysolutions/ps_helper'
+require 'trollop'
+
+#puts "Usage:"
+#puts "Create a new propertysolutions app:"
+#puts "  propertysolutions new <app_path>"
+#puts "Initialize an existing rails app as a new propertysolutions app:"
+#puts "  propertysolutions init [<app_path>]\n\n"
+#exit
+  
+#global_opts = Trollop::options do
+#  banner <<-EOS
+#--------------------------------------------------------------------------------  
+#Property Solutions
+#A gem to consume the Property Solutions API
+#--------------------------------------------------------------------------------
+#Usage:
+#propertysolutions new <path>
+#propertysolutions init [--force] [<path>]
+#--------------------------------------------------------------------------------
+#EOS
+#  version "Caboose CMS Version #{Caboose::VERSION}\n\n"
+#  stop_on ['version', 'new', 'init']
+#end
+#
+#cmd = ARGV.shift
+#case cmd
+#
+#when 'new'
+#  
+#  path = ARGV.shift
+#  if (path.nil?)
+#    puts "Error: path for new app is required.\n\n"
+#    global_opts.help
+#    exit
+#  end
+#  
+#  puts "Creating the new rails app..."
+#  `rails new #{path} -d=mysql`  
+#  helper = CabooseHelper.new(path, true)
+#  helper.init_all
+#  
+#when 'init'
+#  
+#  opts = Trollop::options do
+#    opt :force, 'Force re-installation of all propertysolutions files.', :default => false
+#  end
+#  
+#  path = ARGV.shift
+#  path = Dir.pwd if path.nil?  
+#  is_rails_app = File.exists?(File.join(path, 'config', 'environment.rb'))  
+#  if (!is_rails_app)
+#    puts "Error: Not a rails app.\n\n"
+#    global_opts.help
+#    exit
+#  end
+#  
+#  helper = CabooseHelper.new(path, opts.force)
+#  helper.init_all
+#  
+#else
+#end
+#
