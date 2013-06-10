@@ -5,10 +5,10 @@ module PropertySolutions
   mattr_accessor :domain
   @@domain = ''
   
-  mattr_access :username
+  mattr_accessor :username
   @@username = ''
 
-  mattr_access :password
+  mattr_accessor :password
   @@password = ''
   
 end
