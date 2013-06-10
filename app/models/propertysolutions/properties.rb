@@ -27,7 +27,7 @@ class PropertySolutions::Properties < PropertySolutions::ApiConsumer
   end
   
   def self.properties(property_ids = nil)
-    return self.request('properties', 'getPropertyPickLists', { 
+    return self.request('properties', 'getProperties', { 
       'propertyIds' => property_ids 
     })
   end
