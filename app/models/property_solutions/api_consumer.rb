@@ -18,9 +18,9 @@ class PropertySolutions::ApiConsumer
     
     resp = Typhoeus::Request.new(
         "#{PropertySolutions::domain}.propertysolutions.com/api/#{base}",
-        method: :post,
-        headers: { "Content-type": "application/json, charset: utf-8" },
-        params: data       
+        'method'    => :post,
+        'headers'   => { "Content-type": "application/json, charset: utf-8" },
+        'params'    => data       
       ).run
  
     return resp
