@@ -1,4 +1,6 @@
 
+require 'typheous'
+
 module PropertySolutions
 
   def PropertySolutions.log(message, title = nil)
