@@ -1,9 +1,10 @@
 
 class PropertySolutions::ApiConsumer
   
-  def self.request(base, method, data)
+  def self.request(base, method, data = nil)
 
-    data.delete_if { |k,v| v.nil? }    
+    data = {} if data.nil?
+    data.delete_if { |k,v| v.nil? }
     data = {
       "auth" => {
         "type"      => "basic",
