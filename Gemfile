@@ -9,3 +9,4 @@ gemspec
 #gem 'trollop'
 gem 'typhoeus'
 gem 'activesupport'
+gem 'json'

@@ -21,5 +21,6 @@ Gem::Specification.new do |s|
   s.add_dependency "activesupport"
   s.add_dependency "trollop"
   s.add_dependency "typhoeus"
+  s.add_dependency "json"
   
 end

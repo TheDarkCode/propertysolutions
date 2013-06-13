@@ -1,8 +1,8 @@
-
-require 'typheous'
+require 'typhoeus'
+require 'json'
 
 module PropertySolutions
-
+  
   def PropertySolutions.log(message, title = nil)
     if (Rails.logger.nil?)
       puts "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
