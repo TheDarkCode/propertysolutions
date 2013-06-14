@@ -10,4 +10,3 @@ gemspec
 gem 'typhoeus'
 gem 'activesupport'
 gem 'json'
-
