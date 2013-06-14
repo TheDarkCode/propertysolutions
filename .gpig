@@ -1,4 +1,5 @@
 
 version_file: lib/property_solutions/version.rb
 repo_url: https://github.com/williambarry007/propertysolutions.git
+gemfile: /Users/william/Sites/sealy/Gemfile
 
