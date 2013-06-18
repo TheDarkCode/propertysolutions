@@ -28,11 +28,11 @@ module PropertySolutions
  	      'propertyUnitId'     => options['unit_id'],       # [Integer] optional
  	      'availableUnitsOnly' => options['available']      # [Boolean] optional
  	    })
- 	    return resp
- 	    #return [] if !resp || resp['PhysicalProperty'].nil? || resp['PhysicalProperty']['Property'].nil?
-      #units = resp['PhysicalProperty']['Property'].collect { |p| Property.new(p) }
-      #units = self.sort(units)
-      #return units
+ 	    #return resp
+ 	    return [] if !resp || resp['ILS_Units'].nil? || resp['ILS_Units']['Unit'].nil?
+      units = resp['ILS_Units']['Unit'].collect { |u| Unit.new(u) }
+      units = self.sort(units)
+      return units
  	  end
     
     ## Pulls a list of Amenities
